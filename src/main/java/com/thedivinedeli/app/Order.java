@@ -2,31 +2,15 @@ package com.thedivinedeli.app;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Order {
     private ArrayList<Sandwich> sandwiches = new ArrayList<>();
+    private List<Sandwich> comboSandwich = new ArrayList<>();
+    private List<String> chipsList = new ArrayList<>();
+    private List<String> drinksList = new ArrayList<>();
     private String customerName;
     private String timeStamp;
-    private Drinks selectedDrink;
-
-    public Chips getSelectedChips() {
-        return selectedChips;
-    }
-
-    public void setSelectedChips(Chips selectedChips) {
-        this.selectedChips = selectedChips;
-    }
-
-    public Drinks getSelectedDrink() {
-        return selectedDrink;
-    }
-
-    public void setSelectedDrink(Drinks selectedDrink) {
-        this.selectedDrink = selectedDrink;
-    }
-
-    private Chips selectedChips;
-
 
 
     public ArrayList<Sandwich> getSandwiches() {
@@ -62,14 +46,33 @@ public class Order {
         return sandwiches.size();
 
     }
+    public void addChips(String chipName) {
+        chipsList.add(chipName);
+    }
+
+    public void addDrink(String drinkName) {
+        drinksList.add(drinkName);
+    }
+
 
     public double getOrderTotal() {
-        double orderTotal = 0.0;
-        for(Sandwich s : sandwiches){
-            orderTotal += s.totalPrice();
-        }
+            double regularTotal = 0.0;
+            for (Sandwich s : sandwiches) {
+                regularTotal += s.totalPrice();
+            }
 
-        return orderTotal;
+            double comboTotal = getTotalComboPrice();
+
+            return regularTotal + comboTotal;
+    }
+    public double addCombo(Sandwich sandwich, String chips, String drink) {
+        sandwiches.add(sandwich);
+        chipsList.add(chips);
+        drinksList.add(drink);
+        return 8.88;
+    }
+    public double getTotalComboPrice(){
+        return comboSandwich.size()*8.88;
     }
 
     public String printReceipt(){
@@ -80,22 +83,26 @@ public class Order {
         receipt.append("Printed At: ").append(LocalDateTime.now()).append("\n");
         receipt.append("Moods may change, but this purchase is final. No refunds or exchanges allowed");
 
-        for (Sandwich s : sandwiches){
-            receipt.append(s).append("\n\n");
+        receipt.append("\n--- Regular Sandwiches ---\n");
+        for (Sandwich s : sandwiches) {
+            receipt.append(s).append("\n");
+            receipt.append("-----------------------------------\n");
         }
-        if (selectedChips != null){
-            selectedChips.displayDetails();
-        } else{
-            System.out.println("Nothing to see here...");
-        }
-        if (selectedDrink != null){
-            selectedDrink.displayDetails();
-        }
-        else {
-            System.out.println("Nothing to see here...");
-        }
-        receipt.append("Total: $").append(String.format("%.2f", getOrderTotal()));
-        return receipt.toString();
-    }
 
-}
+        receipt.append("\n--- Combo Meals ---\n");
+        for (int i = 0; i < comboSandwich.size(); i++) {
+            Sandwich s = comboSandwich.get(i);
+            receipt.append(s).append("\n");
+            if (i < chipsList.size()) {
+                receipt.append("Chips: ").append(chipsList.get(i)).append("\n");
+            }
+            if (i < drinksList.size()) {
+                receipt.append("Drink: ").append(drinksList.get(i)).append("\n");
+            }
+            receipt.append("Combo Price: $8.88\n");
+            receipt.append("-----------------------------------\n");
+        }
+        return receipt.toString();
+        }
+
+    }

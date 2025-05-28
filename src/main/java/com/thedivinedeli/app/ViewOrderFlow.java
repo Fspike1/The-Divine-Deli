@@ -20,8 +20,6 @@ public class ViewOrderFlow {
         System.out.println("Press Enter to return to the Home Screen...");
         scanner.nextLine();
 
-
-
     }
 }
 

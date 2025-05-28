@@ -83,7 +83,7 @@ public class Sandwich implements BuildableSandwich {
         this.size = size;
     }
 
-    public String isExtraCheese() {
+    public String ExtraCheese() {
         return extraCheese;
     }
 
@@ -91,7 +91,7 @@ public class Sandwich implements BuildableSandwich {
         this.extraCheese = extraCheese;
     }
 
-    public String isExtraMeat() {
+    public String ExtraMeat() {
         return extraMeat;
     }
 
@@ -110,8 +110,9 @@ public class Sandwich implements BuildableSandwich {
         this.typeOfVeggies = typeOfVeggies;
         this.size = size;
         this.condiments = condiments;
-        this.extraCheese = extraCheese;
-        this.extraMeat = extraMeat;
+        this.extraCheese = "Yes".equalsIgnoreCase(extraCheese) ? "Yes" : "No";
+        this.extraMeat = "Yes".equalsIgnoreCase(extraMeat) ? "Yes" : "No";
+
 
     }
 
@@ -133,10 +134,10 @@ public class Sandwich implements BuildableSandwich {
             case "12in" -> 9.99;
             default -> 0.0;
         };//closes the expression and acts like the end of return
-        if (extraMeat != null && !extraMeat.equalsIgnoreCase("none")) {
+        if ("Yes".equalsIgnoreCase(extraMeat)) {
             basePrice += .50;
         }
-        if (extraCheese != null && !extraCheese.equalsIgnoreCase("none")) {
+        if ("Yes".equalsIgnoreCase(extraCheese)) {
             basePrice += .30;
         }
 
@@ -419,7 +420,7 @@ public class Sandwich implements BuildableSandwich {
             //read user input
             String userInput = scanner.nextLine().trim();
 
-            // Check if the input matches any of the valid options (case-insensitive)
+              // Check if the input matches any of the valid options (case-insensitive)
             for (String option : validOptions) {
                 if (option.equalsIgnoreCase(userInput)) {
                     return option;//returns valid input
