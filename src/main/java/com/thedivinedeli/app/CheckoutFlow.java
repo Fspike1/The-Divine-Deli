@@ -4,12 +4,15 @@ import java.util.Scanner;
 
 public class CheckoutFlow {
     public static void start(Scanner scanner, Order order){
-        if (order.getSandwiches().isEmpty()) {
+        if (order.getSandwiches().isEmpty() && order.getComboSandwiches().isEmpty()) {
             System.out.println("Your cart is empty");
             return;
         }
-        System.out.println("Here is a preview of your order.");
-        order.printReceipt();
+        if (!order.getComboSandwiches().isEmpty() && (!order.getSandwiches().isEmpty())){
+            System.out.println("Here is a preview of your order.");
+            order.printReceipt();
+        }
+
 
         System.out.println("Would you like to confirm your order? (yes/no): ");
         String userInput = scanner.nextLine();

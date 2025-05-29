@@ -34,15 +34,15 @@ public class DivineDeliMenu {
 
     public DivineDeliMenu() {
 
-        moodMenu.put("Happy".toUpperCase(), new Sandwich("The Sunshine Stack", "Bright, golden, and unapologetically feel-good", "Honey Oat", "Sharp White Cheddar", "Oven Roasted Lemon Herb Chicken", "Lettuce, tomato, cucumber, banana peppers", "user choice", "user choice", "user choice", "Honey Mustard"));
-        moodMenu.put("Heartbroken".toUpperCase(), new Sandwich("The Blanket Bite", "Comfort that tastes like a hug", "Butter Croissant", "Smoked Provolone", "Pulled Pork", "Carmalized Onion", "user's choice", "user choice", " ", "Apple Butter, Chipotle Mayo"));
-        moodMenu.put("Upset".toUpperCase(), new Sandwich(" The FireStarter Wrap", "Bold, spicy, and cathartic - For eating your feelings", "Tomato Basil Tortilla", "Fiery jalapeno Cheddar", "Spicy grilled chicken", "Jalapenos, Red Onion, pickles", "user's Choice", " ", " ", "Sriracha + Ranch"));
-        moodMenu.put("Lonely".toUpperCase(), new Sandwich("The Cuddle Melt", "Sweet & savory with a cozy twist", "Cinnamon Swirl Toast", "Fontina", "Honey Glazed Ham", "Apple Slices", "User's Choice", " ", " ", "Maple dressing"));
-        moodMenu.put("Overwhelmed".toUpperCase(), new Sandwich("The Calm Down Crunch", "Simple, grounding, warm and minimal- nothing extra", "Soft Sourdough", "Muenster", "Roast Chicken", "None", "User Choice", " ", " ", "Garlic and Herb Aioli"));
-        moodMenu.put("Detached".toUpperCase(), new Sandwich("The IceBreaker", "Cold, sharp bold flavors to snap you back to reality", "Cold ciabatta", "Blue cheese", "Roast beef", "Pickled Red Onion + Arugala", "User Choice", " ", " ", "Horseradish dressing"));
-        moodMenu.put("Hopeful".toUpperCase(), new Sandwich("The Bloom Bite", "Light, green, vibrant, fresh- like planting a seed", "Seeded Rye", "Goat Cheese", "Lemon dill Salmon", "Sprouts, Cucumber, Avocado", "User choice", " ", " ", "Tzatziki"));
-        moodMenu.put("Exhausted".toUpperCase(), new Sandwich("The Power Nap Press", "Toasted, rich, sweet, savory - a shot of energy in a warm hug", "Toasted Honey Glazed Sourdough", "Smoked Gouda", "Maple-pepper Bacon", "Roasted Sweet potato, baby Spinach", "User Choice", " ", " ", "Citrus-Maple aioli"));
-        moodMenu.put("Wasted".toUpperCase(), new Sandwich("The Gremlin Gobbler", "Greasy, crunchy, sweet and chaotic — everything you shouldn't crave but absolutely do", "Garlic butter Pretzel Bun", "Nacho cheese blend", "Fried Chicken, Crispy Bacon", "Pickles, Caramelized Onion", "User Choice", " ", " ", "Spicy ketchup, ranch drizzle"));
+        moodMenu.put("Happy".toUpperCase(), new Sandwich("The Sunshine Stack", "Bright, golden, and unapologetically feel-good", "Honey Oat", "Oven Roasted Lemon Herb Chicken", "Lettuce, tomato, cucumber, banana peppers", "Honey Mustard","Sharp White Cheddar" , null, null, null));
+        moodMenu.put("Heartbroken".toUpperCase(), new Sandwich("The Blanket Bite", "Comfort that tastes like a hug", "Butter Croissant", "Pulled Pork", "Carmalized Onion", "Apple Butter, Chipotle Mayo","Smoked Provolone" , null, null, null));
+        moodMenu.put("Upset".toUpperCase(), new Sandwich(" The FireStarter Wrap", "Bold, spicy, and cathartic - For eating your feelings", "Tomato Basil Tortilla", "Spicy grilled chicken", "Jalapenos, Red Onion, pickles", "Sriracha + Ranch","Fiery Jalapeno Cheddar" , null,null,null));
+        moodMenu.put("Lonely".toUpperCase(), new Sandwich("The Cuddle Melt", "Sweet & savory with a cozy twist", "Cinnamon Swirl Toast", "Honey Glazed Ham", "Apple Slices", "Maple dressing","Fontina" , null, null, null));
+        moodMenu.put("Overwhelmed".toUpperCase(), new Sandwich("The Calm Down Crunch", "Simple, grounding, warm and minimal- nothing extra", "Soft Sourdough", "Roast Chicken", "None", "Garlic and Herb Aioli","Muenster" , null, null, null));
+        moodMenu.put("Detached".toUpperCase(), new Sandwich("The IceBreaker", "Cold, sharp bold flavors to snap you back to reality", "Cold ciabatta", "Roast beef", "Pickled Red Onion + Arugala", "Horseradish dressing", "Blue Cheese", null, null, null));
+        moodMenu.put("Hopeful".toUpperCase(), new Sandwich("The Bloom Bite", "Light, green, vibrant, fresh- like planting a seed", "Seeded Rye", "Lemon dill Salmon", "Sprouts, Cucumber, Avocado", "Tzatziki", "Goat Cheese", null, null, null));
+        moodMenu.put("Exhausted".toUpperCase(), new Sandwich("The Power Nap Press", "Toasted, rich, sweet, savory - a shot of energy in a warm hug", "Toasted Honey Glazed Sourdough", "Maple pepper Bacon", "Roasted Sweet potato, baby Spinach", "Citrus-Maple aioli","Smoked Gouda" , null, null, null));
+        moodMenu.put("Wasted".toUpperCase(), new Sandwich("The Gremlin Gobbler", "Greasy, crunchy, sweet and chaotic — everything you shouldn't crave but absolutely do", "Garlic butter Pretzel Bun", "Fried Chicken, Crispy Bacon", "Pickles, Caramelized Onion", "Spicy ketchup, ranch drizzle","Nacho Cheese Blend" , null, null, null));
 
 
     }
@@ -50,7 +50,7 @@ public class DivineDeliMenu {
     public Sandwich buildCustomSandwich(Sandwich scanner) {
 
         System.out.println("What would you like on your sandwich?");
-        return new Sandwich("Divine Deli Signature", "For when the mood can't be named but your craving can", "Roasted Garlic Focaccia", "Whipped Goat Cheese & shredded smoked gouda", "Brown sugar glazed roast beef", "Roasted red peppers, baby arugula,crispy shallots", "user choice", " ", " ", "Black Garlic Aioli");
+        return new Sandwich("Divine Deli Signature", "For when the mood can't be named but your craving can", "Roasted Garlic Focaccia", "Brown sugar glazed roast beef", "Roasted red peppers, baby arugula,crispy shallots", "Black Garlic Aioli", "Muenster", "8in", "no", "no");
 
     }
 
@@ -59,9 +59,26 @@ public class DivineDeliMenu {
         Sandwich result = moodMenu.get(userMood.toUpperCase());
 
         if (result != null) {
+            System.out.println("What size would you like? (6in, 8in, or 12in):");
+            String size = scanner.nextLine();
+            while (!size.equals("6in") && !size.equals("8in") && !size.equals("12in")) {
+                System.out.println("That is not a valid size. Please select 6in, 8in, or 12in.");
+                size = scanner.nextLine();
+            }
+            result.setSize(size);
+
+            System.out.println("Would you like extra cheese? (yes/no)");
+            String extraCheese = scanner.nextLine();
+            result.setExtraCheese(extraCheese);
+
+            System.out.println("Would you like extra meat? (yes/no)");
+            String extraMeat = scanner.nextLine();
+            result.setExtraMeat(extraMeat);
+
             return result;
         }
-        System.out.println("We don't have a sandwich for your current mood.");
+
+        System.out.println("We may not have it on the menu, but you can add it!");
         System.out.println("""
                 Would you like to:
                 1. create a mood-based sandwich and put it on the menu
@@ -112,7 +129,7 @@ public class DivineDeliMenu {
             if (suggestedResult.equals(moodMenu.get(userChoice.toUpperCase()))) {
                 return suggestedResult;
             } else
-                return new Sandwich("Divine Deli Signature", "For when the mood can't be named but your craving can", "Roasted Garlic Focaccia", "Whipped Goat Cheese & shredded smoked gouda", "Brown sugar glazed roast beef", "Roasted red peppers, baby arugula,crispy shallots", "user choice", " ", " ", "Black Garlic Aioli");
+                return new Sandwich("Divine Deli Signature", "For when the mood can't be named but your craving can", "Roasted Garlic Focaccia", "Brown sugar glazed roast beef", "Roasted red peppers, baby arugula,crispy shallots", "Black Garlic Aioli","Muenster" , "8in", "no", "no");
         }
         return suggestedResult;
     }

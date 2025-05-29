@@ -1,7 +1,6 @@
 package com.thedivinedeli.app;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -17,6 +16,35 @@ public class Sandwich implements BuildableSandwich {
     private String typeOfCheese;
     private String size;
     private String extraCheese;
+    private boolean comboIncluded;
+
+    public double getComboPrice() {
+        return comboPrice;
+    }
+
+    public void setComboPrice(double comboPrice) {
+        this.comboPrice = comboPrice;
+    }
+
+    public boolean isComboIncluded() {
+        return comboIncluded;
+    }
+
+    public void setComboIncluded(boolean comboIncluded) {
+        this.comboIncluded = comboIncluded;
+    }
+
+    private double comboPrice;
+
+
+    public String getExtraMeat() {
+        return extraMeat;
+    }
+
+    public String getExtraCheese() {
+        return extraCheese;
+    }
+
     private String extraMeat;
 
     public String getSandwichDescription() {
@@ -100,7 +128,7 @@ public class Sandwich implements BuildableSandwich {
     }
 
     //For ordering a mood based sandwich or a sandwich off the menu
-    public Sandwich(String sandwichName, String sandwichDescription, String typeOfBread, String typeOfCheese, String typeOfMeat, String typeOfVeggies, String size, String extraCheese, String extraMeat, String condiments) {
+    public Sandwich(String sandwichName, String sandwichDescription, String typeOfBread, String typeOfMeat, String typeOfVeggies, String condiments, String typeOfCheese, String size, String extraCheese, String extraMeat) {
 
         this.sandwichName = sandwichName;
         this.sandwichDescription = sandwichDescription;
@@ -121,11 +149,11 @@ public class Sandwich implements BuildableSandwich {
 
     }
 
-    public double totalPrice() {
+    public double sandwichPrice() {
         double basePrice = 0.0;
         if (!(size.equals("6in") || size.equals("8in") || size.equals("12in"))) {
             System.out.println("That is not a valid size. Please select 6in, 8in, or 12in.");
-            return 0.0;
+            return basePrice;
         }
         basePrice = switch (size) {//the -> in switch just means return this value(easier to read than :)
             // NOT a lambda expression because it doesn't create a function
@@ -140,6 +168,10 @@ public class Sandwich implements BuildableSandwich {
         if ("Yes".equalsIgnoreCase(extraCheese)) {
             basePrice += .30;
         }
+        if (comboIncluded) {
+            basePrice += comboPrice;
+        }
+
 
         return basePrice;
 
@@ -156,7 +188,7 @@ public class Sandwich implements BuildableSandwich {
                 "\n Condiments: " + condiments +
                 "\n Cheese: " + typeOfCheese +
                 "\n Size: " + size +
-                "\n Total Price: " + String.format("%.2f", totalPrice()) +
+                "\n Total Price: " + String.format("%.2f", sandwichPrice()) +
                 "\n Extra Cheese: " + extraCheese +
                 "\n Extra Meat: " + extraMeat;
 
@@ -374,7 +406,7 @@ public class Sandwich implements BuildableSandwich {
                     "Spicy Grilled Chicken",
                     "Roast Beef",
                     "Lemon Dill Salmon",
-                    "Maple-Pepper Bacon",
+                    "Maple Pepper Bacon",
                     "Fried Chicken",
                     "Crispy Bacon",
                     "Brown Sugar Glazed Roast Beef",

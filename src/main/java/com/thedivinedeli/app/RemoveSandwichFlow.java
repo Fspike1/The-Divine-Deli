@@ -5,9 +5,13 @@ import java.util.Scanner;
 
 public class RemoveSandwichFlow {
     public static void start(Scanner scanner, Order order){
-        if (order.getSandwiches().isEmpty()){
+        if (order.getSandwiches().isEmpty() && order.getComboSandwiches().isEmpty()) {
             System.out.println("Your cart is empty");
             return;
+        }
+        if (!order.getComboSandwiches().isEmpty() && (!order.getSandwiches().isEmpty())){
+            System.out.println("Here is a preview of your order.");
+            order.printReceipt();
         }
         List<Sandwich> cart = order.getSandwiches();//gets list of current sandwiches in cart added by customer.
 
