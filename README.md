@@ -20,7 +20,7 @@ java Main
 ---
 
 ## 💡 Features
-![ScreenRecording2025-05-30023643-ezgif com-optimize](https://github.com/user-attachments/assets/82706f62-9e39-4e84-9314-f5301c502675)
+
 
 - Mood-based sandwich suggestions
 - Custom sandwich builder
@@ -30,7 +30,8 @@ java Main
 ---
 
 ## 🧪 Sample Output
-> _Add terminal screenshots or sample sandwich receipts here._
+![ScreenRecording2025-05-30021232-ezgif com-optimize](https://github.com/user-attachments/assets/0d12ea67-8511-43d6-9a9e-2c6f0f305812)
+
 
 ---
 
@@ -49,8 +50,8 @@ java Main
 |-----------------------------|------------|
 | CLI sandwich selector       | ✅ Done     |
 | Custom sandwich builder     | ✅ Done     |
-| UML diagram                 | 🔧 Working  |
-| Screenshots & demo gif      | ⏳ To Add   |
+| UML diagram                 | ✅ Done  |
+| Screenshots & demo gif      | ✅ Done   |
 | README polish with links    | ⏳ Ongoing  |
 
 ---
@@ -76,7 +77,8 @@ resources/
 
 ## 🎨 Screenshots & Diagrams
 
-![ScreenRecording2025-05-30021232-ezgif com-optimize](https://github.com/user-attachments/assets/0d12ea67-8511-43d6-9a9e-2c6f0f305812)
+
+![ScreenRecording2025-05-30023643-ezgif com-optimize](https://github.com/user-attachments/assets/82706f62-9e39-4e84-9314-f5301c502675)
 
 
 ---
