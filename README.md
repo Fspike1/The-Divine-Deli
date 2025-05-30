@@ -56,7 +56,7 @@ Everything is grass-fed, organic, and blessed by your ancestors. No processed en
 ## 🧠 Interesting Code: slowPrint()
 ![ScreenRecording2025-05-30021232-ezgif com-optimize](https://github.com/user-attachments/assets/0d12ea67-8511-43d6-9a9e-2c6f0f305812)
 
-The [`slowPrint()` method](https://github.com/Fspike1/The-Divine-Deli/blob/main/src/main/java/com/thedivinedeli/app/Main.java#L74) gives printed messages a gentle, emotional delay — perfect for delivering heartfelt or playful messages throughout The Divine Deli experience. 🍞✨
+[The [`slowPrint()` method]](https://github.com/Fspike1/The-Divine-Deli/blob/3a83334feeaa6f9b8bcbdde504d54e3108d001c8/src/main/java/com/thedivinedeli/app/Main.java#L60) gives printed messages a gentle, emotional delay — perfect for delivering heartfelt or playful messages throughout The Divine Deli experience. 🍞✨
 
 ---
 
