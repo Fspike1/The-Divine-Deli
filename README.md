@@ -2,16 +2,16 @@
 # 🥪 Divine Deli: Mood-Based Sandwich Generator
 
 Welcome to **The Divine Deli**, where your feelings determine your flavor. This Java-based CLI app recommends or builds a sandwich based on your current mood.
-
-
----
-
-## 🚀 Getting Started
  🥬✨ **Mood-Fueled. Ingredient Approved.**  
  We don’t do mystery meat or processed nonsense over here.  
  Every bite is **organic**, **grass-fed**, and **unapologetically clean**.  
  No fake flavors. No shady stuff. Just real food for real moods—  
  because healing tastes better when it's fresh.
+
+---
+
+## 🚀 Getting Started
+
 
 ### Prerequisites
 - Java 17+
@@ -25,13 +25,30 @@ java Main
 
 ---
 
-## 💡 Features
 
+## 🥪 Divine Deli Features
 
-- Mood-based sandwich suggestions
-- Custom sandwich builder
-- Price calculator based on size and extras
-- Receipt generation
+✨ **Vibe-to-Bite Technology**  
+Type your mood, get a sandwich. It’s basically emotional telepathy with extra cheese.
+
+🧠 **Build-A-Bite Mode**  
+Feelin’ like a sandwich scientist? Craft your own from scratch—vibes included.
+
+🛒 **Combo Magic**  
+Each meal comes with a mood-matching chip + drink. Curated by the sandwich gods.
+
+💸 **Price That Makes Sense**  
+No surprises. Just angelic numbers, like $8.88. Always feels aligned.
+
+🧾 **Receipts That Slap**  
+Your receipt has jokes, love, and all your flavor stats. Frame it if you want.
+
+📜 **Menu That Reads You**  
+Scroll through sandwiches made for heartbreak, joy, rage, or just being extra.
+
+🌱 **Clean AF Ingredients**  
+Everything is grass-fed, organic, and blessed by your ancestors. No processed energy allowed.
+
 
 ---
 
