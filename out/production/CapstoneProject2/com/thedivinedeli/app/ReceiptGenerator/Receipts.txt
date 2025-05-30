@@ -1,0 +1,41 @@
+----- Receipt: 2025-05-29_17-46-56 -----
+Divine Deli Receipt
+Customer: null
+com.thedivinedeli.app.Order Time: null
+Printed At: 2025-05-29T17:46:56.620846200
+Moods may change, but this purchase is final. No refunds or exchanges allowed
+--- Combo Meals ---
+Chips: truffle oil
+Drink: green juice
+Combo Price: $8.88
+-----------------------------------
+Sandwich
+ Sandwich Name: The Gremlin Gobbler
+ Description: Greasy, crunchy, sweet and chaotic — everything you shouldn't crave but absolutely do
+ Bread: Garlic butter Pretzel Bun
+ Meat: Fried Chicken, Crispy Bacon
+ Veggies: Pickles, Caramelized Onion
+ Condiments: Spicy ketchup, ranch drizzle
+ Cheese: Nacho Cheese Blend
+ Size: 8in
+ Total Price: 9.68
+ Extra Cheese: yes
+ Extra Meat: yes
+Chips: truffle oil
+Drink: green juice
+Combo Price: $8.880000
+-----------------------------------
+
+--- Regular Sandwiches ---
+
+🍞🧀🥓 Totals 🧾💰
+═════════════════════════════════
+
+Total Order Price: $8.88
+
+Regular Sandwiches Total: $0.00
+Combo Meals Total: $8.88
+Grand Total: $8.88
+═════════════════════════════════
+
+Thank you for dining with The Divine Deli

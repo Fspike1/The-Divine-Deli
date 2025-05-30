@@ -2,10 +2,16 @@
 # 🥪 Divine Deli: Mood-Based Sandwich Generator
 
 Welcome to **The Divine Deli**, where your feelings determine your flavor. This Java-based CLI app recommends or builds a sandwich based on your current mood.
+ 🥬✨ **Mood-Fueled. Ingredient Approved.**  
+ We don’t do mystery meat or processed nonsense over here.  
+ Every bite is **organic**, **grass-fed**, and **unapologetically clean**.  
+ No fake flavors. No shady stuff. Just real food for real moods—  
+ because healing tastes better when it's fresh.
 
 ---
 
 ## 🚀 Getting Started
+
 
 ### Prerequisites
 - Java 17+
@@ -19,17 +25,38 @@ java Main
 
 ---
 
-## 💡 Features
 
-- Mood-based sandwich suggestions
-- Custom sandwich builder
-- Price calculator based on size and extras
-- Receipt generation
+## 🥪 Divine Deli Features
+
+✨ **Vibe-to-Bite Technology**  
+Type your mood, get a sandwich. It’s basically emotional telepathy with extra cheese.
+
+🧠 **Build-A-Bite Mode**  
+Feelin’ like a sandwich scientist? Craft your own from scratch—vibes included.
+
+🛒 **Combo Magic**  
+Each meal comes with a mood-matching chip + drink. Curated by the sandwich gods.
+
+💸 **Price That Makes Sense**  
+No surprises. Just angelic numbers, like $8.88. Always feels aligned.
+
+🧾 **Receipts That Slap**  
+Your receipt has jokes, love, and all your flavor stats. Frame it if you want.
+
+📜 **Menu That Reads You**  
+Scroll through sandwiches made for heartbreak, joy, rage, or just being extra.
+
+🌱 **Clean AF Ingredients**
+(AF means AND FRESH!)
+Everything is grass-fed, organic, and blessed by your ancestors. No processed energy allowed.
+
 
 ---
 
-## 🧪 Sample Output
-> _Add terminal screenshots or sample sandwich receipts here._
+## 🧠 Interesting Code: slowPrint()
+![ScreenRecording2025-05-30021232-ezgif com-optimize](https://github.com/user-attachments/assets/0d12ea67-8511-43d6-9a9e-2c6f0f305812)
+
+The [`slowPrint()` method](https://github.com/Fspike1/The-Divine-Deli/blob/main/src/main/java/com/thedivinedeli/app/Main.java#L74) gives printed messages a gentle, emotional delay — perfect for delivering heartfelt or playful messages throughout The Divine Deli experience. 🍞✨
 
 ---
 
@@ -48,48 +75,36 @@ java Main
 |-----------------------------|------------|
 | CLI sandwich selector       | ✅ Done     |
 | Custom sandwich builder     | ✅ Done     |
-| UML diagram                 | 🔧 Working  |
-| Screenshots & demo gif      | ⏳ To Add   |
+| UML diagram                 | ✅ Done  |
+| Screenshots & demo gif      | ✅ Done   |
 | README polish with links    | ⏳ Ongoing  |
 
----
-
-## 🗂 Project Structure
-
-```
-com.thedivinedeli.app/
-├── Main.java
-├── DivineDeliMenu.java
-├── Sandwich.java
-├── Order.java
-├── BuildableSandwich.java
-resources/
-├── screenshots/
-├── diagrams/
-```
 
 ---
+
+
+
 
 ## 🎨 Screenshots & Diagrams
 
-_Add `input.png`, `sandwich.png`, `receipt.png` or UML diagrams here when available._
+
+![ScreenRecording2025-05-30023643-ezgif com-optimize](https://github.com/user-attachments/assets/82706f62-9e39-4e84-9314-f5301c502675)
 
 ---
 
-## 🧠 SDLC Summary
 
-- **Planning**: Map moods to unique sandwich ideas
-- **Design**: UML and class structures
-- **Development**: Java 17, OOP, CLI interaction
-- **Testing**: Manual CLI tests
-- **Deployment**: Ready-to-run CLI
-- **Maintenance**: Modular for updates
+## 🧠 Divine Deli SDLC Flow  
+*“From Mood to Mouthful: How the Deli Gets It Done”*  
+This diagram shows how we turned pure feelings into sandwich magic using the Software Development Life Cycle.
+
+  ![ChatGPT Image May 30, 2025, 03_24_53 AM](https://github.com/user-attachments/assets/3b91bd1d-8d70-41ee-b555-b535bd54abee)
+
 
 ---
 
-## 🙋‍♀️ About the Developer
-
-Faith Spikes 
+## About the Developer
+Faith Spikes – Aspiring software developer, mood-based experience creator, and certified sandwich philosopher.
+🎓 Java + OOP student | 🌐 Future web/VR developer | 🎯 Building tech that heals.
 [LinkedIn](https://linkedin.com/in/yourprofile) | [GitHub](https://github.com/Fspike1)
 
 ---

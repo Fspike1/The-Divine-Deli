@@ -1,0 +1,69 @@
+----- Receipt: 2025-05-29_21-26-11 -----
+Divine Deli Receipt
+Customer: greg
+Order Time: 2025-05-29T21:20:55.687694
+Printed At: 2025-05-29T21:26:11.558469300
+Moods may change, but this purchase is final. No refunds or exchanges allowed
+--- Combo Meals ---
+Sandwich
+ Sandwich Name: The Sunshine Stack
+ Description: Bright, golden, and unapologetically feel-good
+ Bread: Honey Oat
+ Meat: Oven Roasted Lemon Herb Chicken
+ Veggies: Lettuce, tomato, cucumber, banana peppers
+ Condiments: Honey Mustard
+ Cheese: Sharp White Cheddar
+ Size: 12in
+ Total Price: 11.90
+ Extra Cheese: yes
+ Extra Meat: yes
+Chips: truffle oil
+Drink: green juice
+Combo Price: $13.01
+-----------------------------------
+Sandwich
+ Sandwich Name: sad boy sammie
+ Description: for sad boys who like sammies
+ Bread: Seeded Rye
+ Meat: Pulled Pork
+ Veggies: Pickled Red Onion
+ Condiments: BBQ Sauce
+ Cheese: Whipped Goat Cheese
+ Size: 8in
+ Total Price: 8.88
+ Extra Cheese: Fontina
+ Extra Meat: None
+Chips: truffle oil
+Drink: green juice
+Combo Price: $9.99
+-----------------------------------
+Sandwich
+ Sandwich Name: The Calm Down Crunch
+ Description: Simple, grounding, warm and minimal- nothing extra
+ Bread: Soft Sourdough
+ Meat: Roast Chicken
+ Veggies: None
+ Condiments: Garlic and Herb Aioli
+ Cheese: Muenster
+ Size: 6in
+ Total Price: 6.96
+ Extra Cheese: yes
+ Extra Meat: no
+Chips: chile lime chips
+Drink: lavender lemonade
+Combo Price: $8.88
+-----------------------------------
+
+--- Regular Sandwiches ---
+
+🍞🧀🥓 Totals 🧾💰
+═════════════════════════════════
+
+Total Order Price: $31.88
+
+Regular Sandwiches Total: $0.00
+Combo Meals Total: $31.88
+Grand Total: $31.88
+═════════════════════════════════
+
+Thank you for dining with The Divine Deli
