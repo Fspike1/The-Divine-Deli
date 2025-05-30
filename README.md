@@ -86,13 +86,6 @@ resources/
 ## 🧠 SDLC Summary
   ![ChatGPT Image May 30, 2025, 03_24_53 AM](https://github.com/user-attachments/assets/3b91bd1d-8d70-41ee-b555-b535bd54abee)
 
-- **Planning**: Map moods to unique sandwich ideas
-- **Design**: UML and class structures
-- **Development**: Java 17, OOP, CLI interaction
-- **Testing**: Manual CLI tests
-- **Deployment**: Ready-to-run CLI
-- **Maintenance**: Modular for updates
-
 
 ---
 
