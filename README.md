@@ -70,9 +70,13 @@ resources/
 
 ---
 
+
+
+
 ## 🎨 Screenshots & Diagrams
 
-_Add `input.png`, `sandwich.png`, `receipt.png` or UML diagrams here when available._
+
+https://github.com/user-attachments/assets/f4d6dbd6-8f1e-43f1-9eb2-ac547ef45590
 
 ---
 
