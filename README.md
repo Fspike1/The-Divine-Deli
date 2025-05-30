@@ -104,9 +104,94 @@ resources/
 ![ScreenRecording2025-05-30023643-ezgif com-optimize](https://github.com/user-attachments/assets/82706f62-9e39-4e84-9314-f5301c502675)
 
 
+## 🗂️ Class Structure (UML - Mermaid)
+
+```mermaid
+classDiagram
+
+class Main
+
+class HomeScreen {
+  +newOrder()
+  +mainMenu()
+  +exit()
+}
+
+class DivineDeliMenu {
+  +sandwichSuggestion()
+  +printMoodMenu()
+  +buildCustomSandwich()
+}
+
+class MoodSandwichFlow {
+  +customSandwich()
+  +moodBasedSandwich()
+  +showFullMenu()
+}
+
+class ComboFlow {
+  +selectChips()
+  +selectDrink()
+  +start()
+}
+
+class ViewOrderFlow {
+  +start()
+}
+
+class RemoveSandwichFlow {
+  +start()
+}
+
+class Order {
+  +addSandwich(List~Sandwich~)
+  +addCustomSandwich(BuildableSandwich)
+  +addDrinks(List~Drink~)
+  +getComboSandwiches()
+  +calculateTotal()
+}
+
+class Sandwich {
+  -String sandwichName
+  -String description
+  -String bread
+  -String meat
+  -String veggies
+  -String condiments
+  -String cheese
+  -String size
+  -boolean comboIncluded
+  +sandwichPrice()
+}
+
+class ComboItem {
+  -String name
+  -String ingredients
+  -String description
+  -String type
+}
+
+class BuildableSandwich {
+  <<interface>>
+}
+
+Sandwich ..|> BuildableSandwich
+Order o-- Sandwich
+Order o-- ComboItem
+MoodSandwichFlow --> DivineDeliMenu
+ComboFlow --> Order
+HomeScreen --> MoodSandwichFlow
+DivineDeliMenu --> Sandwich
+RemoveSandwichFlow --> Order
+ViewOrderFlow --> Order
+
 ---
 
-## 🧠 SDLC Summary
+
+## 🧠 Divine Deli SDLC Flow  
+*“From Mood to Mouthful: How the Deli Gets It Done”*  
+This diagram shows how we turned pure feelings into sandwich magic using the Software Development Life Cycle.
+
   ![ChatGPT Image May 30, 2025, 03_24_53 AM](https://github.com/user-attachments/assets/3b91bd1d-8d70-41ee-b555-b535bd54abee)
 
 
