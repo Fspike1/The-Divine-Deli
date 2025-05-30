@@ -56,7 +56,7 @@ Everything is grass-fed, organic, and blessed by your ancestors. No processed en
 ## 🧠 Interesting Code: slowPrint()
 ![ScreenRecording2025-05-30021232-ezgif com-optimize](https://github.com/user-attachments/assets/0d12ea67-8511-43d6-9a9e-2c6f0f305812)
 
-
+The [`slowPrint()` method](
 
 ---
 
