@@ -87,9 +87,9 @@ _Add `input.png`, `sandwich.png`, `receipt.png` or UML diagrams here when availa
 
 ---
 
-## 🙋‍♀️ About the Developer
-
-Faith Spikes 
+## About the Developer
+Faith Spikes – Aspiring software developer, mood-based experience creator, and certified sandwich philosopher.
+🎓 Java + OOP student | 🌐 Future web/VR developer | 🎯 Building tech that heals.
 [LinkedIn](https://linkedin.com/in/yourprofile) | [GitHub](https://github.com/Fspike1)
 
 ---
