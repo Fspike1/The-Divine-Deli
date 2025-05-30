@@ -20,6 +20,7 @@ java Main
 ---
 
 ## 💡 Features
+![ScreenRecording2025-05-30023643-ezgif com-optimize](https://github.com/user-attachments/assets/82706f62-9e39-4e84-9314-f5301c502675)
 
 - Mood-based sandwich suggestions
 - Custom sandwich builder
