@@ -46,15 +46,29 @@ Your receipt has jokes, love, and all your flavor stats. Frame it if you want.
 📜 **Menu That Reads You**  
 Scroll through sandwiches made for heartbreak, joy, rage, or just being extra.
 
-🌱 **Clean AF Ingredients**  
+🌱 **Clean AF Ingredients**
+(AF means AND FRESH!)
 Everything is grass-fed, organic, and blessed by your ancestors. No processed energy allowed.
 
 
 ---
 
-## 🧪 Sample Output
+## 🧠 Interesting Code: slowPrint()
 ![ScreenRecording2025-05-30021232-ezgif com-optimize](https://github.com/user-attachments/assets/0d12ea67-8511-43d6-9a9e-2c6f0f305812)
 
+```java
+// Main.java — Used throughout the app for a slow, immersive text experience
+public static void slowPrint(String message, int delay) {
+    for (char c : message.toCharArray()) {
+        System.out.print(c);
+        try {
+            Thread.sleep(delay); // Delay in milliseconds
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
+    System.out.println(); // move to next line after printing
+}
 
 ---
 
@@ -77,21 +91,6 @@ Everything is grass-fed, organic, and blessed by your ancestors. No processed en
 | Screenshots & demo gif      | ✅ Done   |
 | README polish with links    | ⏳ Ongoing  |
 
----
-
-## 🗂 Project Structure
-
-```
-com.thedivinedeli.app/
-├── Main.java
-├── DivineDeliMenu.java
-├── Sandwich.java
-├── Order.java
-├── BuildableSandwich.java
-resources/
-├── screenshots/
-├── diagrams/
-```
 
 ---
 
@@ -102,88 +101,6 @@ resources/
 
 
 ![ScreenRecording2025-05-30023643-ezgif com-optimize](https://github.com/user-attachments/assets/82706f62-9e39-4e84-9314-f5301c502675)
-
-
-## 🗂️ Class Structure (UML - Mermaid)
-
-```mermaid
-classDiagram
-
-class Main
-
-class HomeScreen {
-  +newOrder()
-  +mainMenu()
-  +exit()
-}
-
-class DivineDeliMenu {
-  +sandwichSuggestion()
-  +printMoodMenu()
-  +buildCustomSandwich()
-}
-
-class MoodSandwichFlow {
-  +customSandwich()
-  +moodBasedSandwich()
-  +showFullMenu()
-}
-
-class ComboFlow {
-  +selectChips()
-  +selectDrink()
-  +start()
-}
-
-class ViewOrderFlow {
-  +start()
-}
-
-class RemoveSandwichFlow {
-  +start()
-}
-
-class Order {
-  +addSandwich(List~Sandwich~)
-  +addCustomSandwich(BuildableSandwich)
-  +addDrinks(List~Drink~)
-  +getComboSandwiches()
-  +calculateTotal()
-}
-
-class Sandwich {
-  -String sandwichName
-  -String description
-  -String bread
-  -String meat
-  -String veggies
-  -String condiments
-  -String cheese
-  -String size
-  -boolean comboIncluded
-  +sandwichPrice()
-}
-
-class ComboItem {
-  -String name
-  -String ingredients
-  -String description
-  -String type
-}
-
-class BuildableSandwich {
-  <<interface>>
-}
-
-Sandwich ..|> BuildableSandwich
-Order o-- Sandwich
-Order o-- ComboItem
-MoodSandwichFlow --> DivineDeliMenu
-ComboFlow --> Order
-HomeScreen --> MoodSandwichFlow
-DivineDeliMenu --> Sandwich
-RemoveSandwichFlow --> Order
-ViewOrderFlow --> Order
 
 ---
 
