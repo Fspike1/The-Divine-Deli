@@ -1,5 +1,7 @@
 package com.thedivinedeli.app;
 
+import com.thedivinedeli.app.ReceiptGenerator.ReceiptGenerator;
+
 import java.util.Scanner;
 
 public class CheckoutFlow {
@@ -26,5 +28,6 @@ public class CheckoutFlow {
         else {
             System.out.println("Order not placed. Returning to Home Screen");
         }
+        ReceiptGenerator.Generate(order);
     }
 }

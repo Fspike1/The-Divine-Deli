@@ -65,6 +65,15 @@ public class ComboFlow {
 
     }
     public static void start(Scanner scanner, Order order) {
+        setChipsMap();
+        setDrinksMap();
+
+        if (chipsMap == null || chipsMap.isEmpty()) {
+            setChipsMap();
+        }
+        if (drinksMap == null || drinksMap.isEmpty()) {
+            setDrinksMap();
+        }
 
         DivineDeliMenu matcher = null;
 
@@ -72,21 +81,17 @@ public class ComboFlow {
         System.out.println("How are you feeling today?");
         String userMood = scanner.nextLine();
         System.out.println("Oh your mood is "+ userMood + "? I have the perfect combo for you! ");
-        System.out.println("What size would you like? (6in, 8in, or 12in):");
-        String size1 = scanner.nextLine();
+        //System.out.println("What size would you like? (6in, 8in, or 12in):");
+        String size1 = "";
 
 
         System.out.println("Select from the following Moods or create your own");
         System.out.println("""
-                - Happy
-                - Detached
-                - Heartbroken
-                - Exhausted
-                - Wasted
-                - Overwhelmed
-                - Hopeful
-                - Lonely
-                - Upset""");
+        🌞 Happy         🧊 Detached
+        💔 Heartbroken   💤 Exhausted
+        🍷 Wasted        😵 Overwhelmed
+        🌱 Hopeful       😔 Lonely
+        😡 Upset""");
         userMood = scanner.nextLine();
 
         System.out.println("Can I get a name for the order?");
@@ -97,12 +102,6 @@ public class ComboFlow {
         matcher = new DivineDeliMenu();
 
         Sandwich mySandwich1 = matcher.sandwichSuggestion(userMood, scanner);
-
-        while (!size1.equals("6in") && !size1.equals("8in") && !size1.equals("12in")) {
-            System.out.println("That is not a valid size. Please select 6in, 8in, or 12in.");
-            size1 = scanner.nextLine();
-        }
-        mySandwich1.setSize(size1);
 
         System.out.println("Your suggested sandwich is: " + mySandwich1);
         System.out.println("PLEASE NOTE: This is the sandwich's standalone price. Your full combo is angelically locked in at $8.88 — no matter the size");

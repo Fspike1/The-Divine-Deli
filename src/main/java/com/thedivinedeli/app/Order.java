@@ -112,13 +112,9 @@ public class Order {
         for (Sandwich s : sandwiches) {
             regularTotal += s.sandwichPrice();
         }
-        if (hasCombo) {
-            regularTotal += 8.88;
-        }
-
         double comboTotal = getTotalComboPrice();
 
-        return regularTotal;
+        return regularTotal + comboTotal;
     }
 
     public void addCombo(Sandwich comboSandwich, String chips, String drink) {
@@ -130,30 +126,39 @@ public class Order {
     }
 
     public double getTotalComboPrice() {
-        return comboSandwiches.size() * 8.88;
-    }
+        double total = 0.0;
+        for (Sandwich s : comboSandwiches) {
+            if (s.isMoodBased()) {
+                total += 8.88;
+            } else {
+                total += s.sandwichPrice() + 1.11;
+            }
+        }
+        return total;    }
 
     public String printReceipt() {
 
         StringBuilder receipt = new StringBuilder();
         receipt.append("Divine Deli Receipt\n");
         receipt.append("Customer: ").append(customerName).append("\n");
-        receipt.append("com.thedivinedeli.app.Order Time: ").append(timeStamp).append("\n");
+        receipt.append("Order Time: ").append(timeStamp).append("\n");
         receipt.append("Printed At: ").append(LocalDateTime.now()).append("\n");
         receipt.append("Moods may change, but this purchase is final. No refunds or exchanges allowed");
 
         if (hasCombo && !comboSandwiches.isEmpty()) {
             receipt.append("\n--- Combo Meals ---\n");
-            receipt.append("Chips: ").append(chipsList.getFirst()).append("\n");
-            receipt.append("Drink: ").append(drinksList.getFirst()).append("\n");
-            receipt.append("Combo Price: $8.88\n");
-            receipt.append("-----------------------------------\n");
-
-            System.out.println(chips);
-            System.out.println(drink);
 
             for (int i = 0; i < comboSandwiches.size(); i++) {
                 Sandwich s = comboSandwiches.get(i);
+
+                //Could use this: String comboType = s.isMoodBased() ? "Mood Combo" : "Custom Combo";
+                String comboType;
+                if (s.isMoodBased()){
+                    comboType = "Mood Combo";
+                }
+                else{
+                    comboType = "Custom Combo";
+                }
                 receipt.append(s).append("\n");
                 if (i < chipsList.size()) {
                     receipt.append("Chips: ").append(chipsList.get(i)).append("\n");
@@ -161,15 +166,31 @@ public class Order {
                 if (i < drinksList.size()) {
                     receipt.append("Drink: ").append(drinksList.get(i)).append("\n");
                 }
-                receipt.append("Combo Price: $8.88\n");
+                double price = 0.0;
+                if(s.isMoodBased()) {
+                   price = 8.88;
+                }
+                else {
+                  price = s.sandwichPrice() + 1.11;
+
+                }
+                receipt.append("Combo Price: $").append(String.format("%.2f",price)).append("\n");
                 receipt.append("-----------------------------------\n");
             }
         }
 
 
         receipt.append("\n--- Regular Sandwiches ---\n");
-        for (Sandwich s : sandwiches) {
-            receipt.append(s).append("\n");
+        if (!sandwiches.isEmpty()) {
+            receipt.append("\n--- Regular Sandwiches ---\n");
+            for (Sandwich s : sandwiches) {
+                receipt.append(s).append("\n");
+                receipt.append("-----------------------------------\n");
+            }
+        }
+        else {
+            receipt.append("\n--- Regular Sandwiches ---\n");
+            receipt.append("(No regular sandwiches in this order)\n");
             receipt.append("-----------------------------------\n");
         }
         receipt.append("\n🍞🧀🥓 Totals 🧾💰\n");
@@ -190,7 +211,6 @@ public class Order {
                 .append("\n");
         receipt.append("═════════════════════════════════\n");
 
-        receipt.append("\nThank you for dining with The Divine Deli");
 
 
         return receipt.toString();
@@ -217,5 +237,8 @@ public class Order {
         return printReceipt();
     }
 
+    public void addSandwich(Sandwich sandwich) {
+        sandwiches.add(sandwich);
+    }
 }
 

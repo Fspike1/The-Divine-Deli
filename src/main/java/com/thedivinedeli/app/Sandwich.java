@@ -17,6 +17,15 @@ public class Sandwich implements BuildableSandwich {
     private String size;
     private String extraCheese;
     private boolean comboIncluded;
+    private boolean moodBased = false;
+
+    public boolean isMoodBased() {
+        return moodBased;
+    }
+
+    public void setMoodBased(boolean moodBased) {
+        this.moodBased = moodBased;
+    }
 
     public double getComboPrice() {
         return comboPrice;
@@ -128,7 +137,7 @@ public class Sandwich implements BuildableSandwich {
     }
 
     //For ordering a mood based sandwich or a sandwich off the menu
-    public Sandwich(String sandwichName, String sandwichDescription, String typeOfBread, String typeOfMeat, String typeOfVeggies, String condiments, String typeOfCheese, String size, String extraCheese, String extraMeat) {
+    public Sandwich(String sandwichName, String sandwichDescription, String typeOfBread, String typeOfMeat, String typeOfVeggies, String condiments, String typeOfCheese, String extraCheese, String extraMeat) {
 
         this.sandwichName = sandwichName;
         this.sandwichDescription = sandwichDescription;
@@ -136,7 +145,6 @@ public class Sandwich implements BuildableSandwich {
         this.typeOfCheese = typeOfCheese;
         this.typeOfMeat = typeOfMeat;
         this.typeOfVeggies = typeOfVeggies;
-        this.size = size;
         this.condiments = condiments;
         this.extraCheese = "Yes".equalsIgnoreCase(extraCheese) ? "Yes" : "No";
         this.extraMeat = "Yes".equalsIgnoreCase(extraMeat) ? "Yes" : "No";
@@ -151,6 +159,9 @@ public class Sandwich implements BuildableSandwich {
 
     public double sandwichPrice() {
         double basePrice = 0.0;
+        if (this.size == null) {
+            return 0.0; // or some default fallback
+        }
         if (!(size.equals("6in") || size.equals("8in") || size.equals("12in"))) {
             System.out.println("That is not a valid size. Please select 6in, 8in, or 12in.");
             return basePrice;
@@ -197,6 +208,7 @@ public class Sandwich implements BuildableSandwich {
 
     @Override
     public void customize(Scanner scanner) {
+
 
         //List of valid bread options
         List<String> breadOptions = new ArrayList<>(List.of(
@@ -400,7 +412,6 @@ public class Sandwich implements BuildableSandwich {
         System.out.println("Would you like any extra meat or cheese? (yes/no) ");
         String extrasChoice = scanner.nextLine();
         if (extrasChoice.equalsIgnoreCase("yes")) {
-            System.out.println("Select one extra meat");
             List<String> extraOptions = new ArrayList<>(List.of("Oven Roasted Lemon Herb Chicken",
                     "Pulled Pork",
                     "Spicy Grilled Chicken",
